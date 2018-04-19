@@ -7,6 +7,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { AlertaComponent } from './alerta/alerta.component';
 import { CardComponent } from './card/card.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CardComponent } from './card/card.component';
     RodapeComponent,
     CabecalhoComponent,
     AlertaComponent,
-    CardComponent
+    CardComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule

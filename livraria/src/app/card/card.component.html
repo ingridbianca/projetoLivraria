@@ -1,40 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Livro Caraval">
+    <div class="col-md-3" *ngFor="let livro of livros">
+      <div class="card text-center">
+        <img class="card-img-top" src="{{livro.foto}}" alt="{{livro.titulo}}">
         <div class="card-body">
-          <p class="card-text">Caraval - Stephanie Garber - R$21,00</p>
-          <app-alerta></app-alerta>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Livro Kenobi">
-        <div class="card-body">
-          <p class="card-text">Kenobi - John Jackson Miller - R$30,00 </p>
-          <app-alerta></app-alerta>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Livro Perdida">
-        <div class="card-body">
-          <p class="card-text">Perdida - Carina Rissi - R$25,00 </p>
-          <app-alerta></app-alerta>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Livro Encontrada">
-        <div class="card-body">
-          <p class="card-text">Encontrada - Carina Rissi - R$25,00</p>
+          <p class="card-text">{{livro.titulo}} - {{livro.autor}} -{{livro.preco}} </p>
           <app-alerta></app-alerta>
         </div>
       </div>
     </div>
   </div>
 </div>
+
