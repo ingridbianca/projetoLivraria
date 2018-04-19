@@ -1,14 +1,26 @@
 <div class="container">
-  <div class="row">
+  <div class="row" *ngIf="mostraLivros; else carrinho" #principal>
     <div class="col-md-3" *ngFor="let livro of livros">
       <div class="card text-center">
         <img class="card-img-top" src="{{livro.foto}}" alt="{{livro.titulo}}">
         <div class="card-body">
           <p class="card-text">{{livro.titulo}} - {{livro.autor}} -{{livro.preco}} </p>
-          <app-alerta></app-alerta>
+          <button (click)="mostrarLivros()" type="button" class="btn btn-info">Comprar</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<ng-template #carrinho>
+  <div class="row">
+    <div class="card text-center col-lg-10">
+        <img class="card-img-top img-200-200" src="../../assets/fotos/carrinho.png" alt="Carrinho de compra">
+      <div class="card-body">
+        <p>Por favor, finalize a compra ou volte para a tela principal</p>
+        <app-alerta></app-alerta>
+        <button (click)="mostrarLivros()" type="button" class="btn btn-secondary">Voltar</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

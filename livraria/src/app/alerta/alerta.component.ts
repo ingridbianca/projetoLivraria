@@ -12,7 +12,7 @@ export class AlertaComponent implements OnInit {
   ngOnInit() {
   }
 
-  public mostrarAlerta(){
-    alert('Produto adicionado no carrinho!');
+  public mostrarAlerta() {
+    alert('Compra Finalizada!');
   }
 }
